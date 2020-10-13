@@ -1,0 +1,3 @@
+13T	/data/shenlab/abd
+4.0G	/data/shenlab/admin
+826G	/data/shenlab/ct
