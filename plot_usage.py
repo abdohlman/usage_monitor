@@ -72,7 +72,7 @@ def plot_usage(df_all):
 	                  hue="user", hue_order=current.index[::-1], ci=0, alpha=0.75,
 	                  data=df_all, palette=user2color, ax=ax)
 	ax.get_legend().remove()
-	yticks = np.arange(0,2e10,2e9)
+	yticks = np.arange(0,9e10,2e9)
 	plt.yticks(yticks, [ convert_size(1024*y,0) for y in yticks ],fontsize=6)
 	plt.ylim(0,1.25*current.max())
 	plt.ylabel('Individual Usage',fontsize=8)
@@ -102,7 +102,6 @@ def plot_usage(df_all):
 	    size = current.loc[name]
 	    plt.text(i,size,convert_size(1024*size,precision=1).replace(' ','\n'),ha='center',va='bottom',fontsize=4)
 
-	# plt.show()
 	plt.savefig('usage_report.pdf')
 
 if __name__ == "__main__":
